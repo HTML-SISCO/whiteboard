@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | SketchFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SF</span>
+      <span>SketchFlow</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Back to Home</a>
+      <a href="saved.html">Saved Boards</a>
+      <a href="settings.html">Settings</a>
+      <a class="button button-small" href="whiteboard.html">Whiteboard</a>
+    </nav>
+  </header>
+
+  <main class="profile-shell">
+    <section class="profile-panel">
+      <div class="profile-avatar" id="profileAvatar">SF</div>
+      <div>
+        <p class="eyebrow">Account</p>
+        <h1 id="profileName">Guest</h1>
+        <p id="profileEmail" class="profile-email">Not logged in</p>
+      </div>
+    </section>
+
+    <section class="profile-grid">
+      <div class="profile-card">
+        <span>Saved boards</span>
+        <strong id="profileBoards">0</strong>
+      </div>
+      <div class="profile-card">
+        <span>Account status</span>
+        <strong id="profileStatus">Guest</strong>
+      </div>
+      <div class="profile-actions">
+        <a class="button" href="whiteboard.html">Open Whiteboard</a>
+        <a class="button button-ghost" href="saved.html">View Saved Boards</a>
+        <button id="logoutBtn" class="button logout-button" type="button">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="theme.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

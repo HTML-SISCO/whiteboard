@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | SketchFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SF</span>
+      <span>SketchFlow</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Back to Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html">Login</a>
+      <a class="button button-small" href="whiteboard.html">Whiteboard</a>
+    </nav>
+  </header>
+
+  <main class="auth-shell">
+    <section class="auth-panel">
+      <p class="eyebrow">Start creating</p>
+      <h1>Register</h1>
+      <form id="registerForm" class="auth-form">
+        <label>
+          Full name
+          <input type="text" id="registerName" autocomplete="name" minlength="2" required>
+        </label>
+        <label>
+          Email
+          <input type="email" id="registerEmail" autocomplete="email" required>
+        </label>
+        <label>
+          Password
+          <input type="password" id="registerPassword" autocomplete="new-password" minlength="6" required>
+        </label>
+        <button class="button" type="submit">Create Account</button>
+        <p id="registerMessage" class="form-message" role="status"></p>
+      </form>
+      <p class="auth-switch">Already registered? <a href="login.html">Login instead</a></p>
+    </section>
+  </main>
+
+  <script src="theme.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

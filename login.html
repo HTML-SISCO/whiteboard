@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SketchFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SF</span>
+      <span>SketchFlow</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Back to Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="register.html">Register</a>
+      <a class="button button-small" href="whiteboard.html">Whiteboard</a>
+    </nav>
+  </header>
+
+  <main class="auth-shell">
+    <section class="auth-panel">
+      <p class="eyebrow">Welcome back</p>
+      <h1>Login</h1>
+      <form id="loginForm" class="auth-form">
+        <label>
+          Email
+          <input type="email" id="loginEmail" autocomplete="email" required>
+        </label>
+        <label>
+          Password
+          <input type="password" id="loginPassword" autocomplete="current-password" required>
+        </label>
+        <button class="button" type="submit">Login</button>
+        <p id="loginMessage" class="form-message" role="status"></p>
+      </form>
+      <p class="auth-switch">New here? <a href="register.html">Create an account</a></p>
+    </section>
+  </main>
+
+  <script src="theme.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

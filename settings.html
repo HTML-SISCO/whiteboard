@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | SketchFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SF</span>
+      <span>SketchFlow</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Back to Home</a>
+      <a href="profile.html">Profile</a>
+      <a class="button button-small" href="whiteboard.html">Whiteboard</a>
+    </nav>
+  </header>
+
+  <main class="settings-shell">
+    <section class="settings-heading">
+      <p class="eyebrow">Customize</p>
+      <h1>Settings</h1>
+      <p>Choose your workspace theme, whiteboard paper style, default tools, and storage preferences.</p>
+    </section>
+
+    <section class="settings-grid">
+      <article class="settings-card">
+        <h2>App Theme</h2>
+        <div class="theme-options" data-setting="siteTheme">
+          <button class="theme-choice" data-value="light" type="button"><span class="swatch light-swatch"></span>Light</button>
+          <button class="theme-choice" data-value="dark" type="button"><span class="swatch dark-swatch"></span>Dark</button>
+          <button class="theme-choice" data-value="ocean" type="button"><span class="swatch ocean-swatch"></span>Ocean</button>
+          <button class="theme-choice" data-value="sunset" type="button"><span class="swatch sunset-swatch"></span>Sunset</button>
+        </div>
+      </article>
+
+      <article class="settings-card">
+        <h2>Whiteboard Paper</h2>
+        <div class="theme-options" data-setting="boardTheme">
+          <button class="theme-choice" data-value="white" type="button"><span class="swatch paper-white"></span>White</button>
+          <button class="theme-choice" data-value="cream" type="button"><span class="swatch paper-cream"></span>Cream</button>
+          <button class="theme-choice" data-value="midnight" type="button"><span class="swatch paper-midnight"></span>Midnight</button>
+          <button class="theme-choice" data-value="mint" type="button"><span class="swatch paper-mint"></span>Mint</button>
+        </div>
+      </article>
+
+      <article class="settings-card">
+        <h2>Default Drawing</h2>
+        <label class="control-label">Default color
+          <input id="defaultColor" type="color" value="#2563eb">
+        </label>
+        <label class="control-label">Default brush size
+          <input id="defaultBrushSize" type="range" min="2" max="42" value="8">
+          <span id="defaultBrushValue">8 px</span>
+        </label>
+      </article>
+
+      <article class="settings-card">
+        <h2>Board Behavior</h2>
+        <label class="toggle-row">
+          <input id="autoSave" type="checkbox">
+          <span>Autosave current board while drawing</span>
+        </label>
+        <label class="toggle-row">
+          <input id="largeText" type="checkbox">
+          <span>Use larger toolbar text</span>
+        </label>
+        <div class="settings-actions">
+          <button id="resetSettings" class="tool-button" type="button">Reset Settings</button>
+          <button id="clearSavedBoards" class="tool-button danger" type="button">Clear Saved Boards</button>
+        </div>
+        <p id="settingsMessage" class="form-message" role="status"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="theme.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

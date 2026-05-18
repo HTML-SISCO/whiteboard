@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard | SketchFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="board-page">
+  <header class="board-topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SF</span>
+      <span>SketchFlow</span>
+    </a>
+    <div class="board-title">
+      <input id="boardTitle" value="Untitled board" aria-label="Board title">
+      <span id="userBadge">Guest mode</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Back to Home</a>
+      <a href="saved.html">Saved Boards</a>
+      <a href="profile.html">Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="whiteboard-app">
+    <aside class="tool-panel" aria-label="Whiteboard tools">
+      <div class="tool-group">
+        <button class="tool-button active" data-tool="pen" title="Pen">Pen</button>
+        <button class="tool-button" data-tool="eraser" title="Eraser">Erase</button>
+        <button class="tool-button" data-tool="line" title="Line">Line</button>
+        <button class="tool-button" data-tool="rect" title="Rectangle">Rect</button>
+        <button class="tool-button" data-tool="circle" title="Circle">Circle</button>
+        <button class="tool-button" data-tool="text" title="Text">Text</button>
+      </div>
+
+      <div class="tool-group">
+        <label class="control-label">Color
+          <input id="colorPicker" type="color" value="#2563eb">
+        </label>
+        <label class="control-label">Size
+          <input id="brushSize" type="range" min="2" max="42" value="8">
+          <span id="brushValue">8</span>
+        </label>
+      </div>
+
+      <div class="tool-group">
+        <button id="undoBtn" class="tool-button">Undo</button>
+        <button id="redoBtn" class="tool-button">Redo</button>
+        <button id="clearBtn" class="tool-button danger">Clear</button>
+      </div>
+
+      <div class="tool-group">
+        <button id="noteBtn" class="tool-button">Note</button>
+        <button id="saveBtn" class="tool-button">Save Board</button>
+        <button id="exportBtn" class="tool-button">Save PNG</button>
+        <label class="tool-button file-button">
+          Image
+          <input id="imageLoader" type="file" accept="image/*">
+        </label>
+      </div>
+    </aside>
+
+    <section class="canvas-shell">
+      <canvas id="whiteboardCanvas" aria-label="Interactive whiteboard canvas"></canvas>
+      <div id="notesLayer" class="notes-layer"></div>
+      <input id="textInput" class="floating-text" type="text" aria-label="Canvas text input">
+    </section>
+
+    <aside class="info-panel">
+      <h2>Board Tools</h2>
+      <div class="stat-list">
+        <div><span>Tool</span><strong id="toolStatus">Pen</strong></div>
+        <div><span>Brush</span><strong id="sizeStatus">8 px</strong></div>
+        <div><span>Objects</span><strong id="objectStatus">0</strong></div>
+      </div>
+      <div class="mini-guide">
+        <p>Click and drag to draw. Use text mode to place labels. Notes can be moved by dragging their top edge.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="theme.js"></script>
+  <script src="whiteboard.js"></script>
+</body>
+</html>
